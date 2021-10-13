@@ -19,7 +19,6 @@ class VizSet:
         if not os.path.exists(output_path):
             os.mkdir(output_path)
 
-    @classmethod
     def plot_confusion_matrix(
             self,
             real : np.array = [], 
@@ -88,16 +87,4 @@ class VizSet:
             fig.savefig(save_path)
         else:
             plt.show()
-    
 
-if __name__ == "__main__":
-    #
-    # Module Test 
-    #
-    import numpy as np
-
-    pred = np.random.randint(1,10,10)
-    real = np.random.randint(1,10,10)
-
-    viz_set = VizSet(real, pred)
-    viz_set.plot_confusion_matrix(real, pred, False)
