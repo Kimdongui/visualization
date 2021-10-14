@@ -1,3 +1,4 @@
 viz_results/
 __pycache__/
-test.py
+test.*
+.*
